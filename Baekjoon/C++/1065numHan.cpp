@@ -20,6 +20,5 @@ int main() {
 				cnt++;
 		}
 	}
-
 	cout << cnt;
 }
