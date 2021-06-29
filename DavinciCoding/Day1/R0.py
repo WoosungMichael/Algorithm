@@ -4,13 +4,10 @@ arr = []
 for i in range(N):
     arr.append(list(map(int, input().split())))
 
+print(arr)
 max = 0
-for i in range(len(arr)):
-    min = arr[i][0]
-    for j in arr[i]:
-        if(j < min):
-            min = j
-    if(max < min):
-        max = min
+for i in arr:
+    if(max < min(i)):
+        max = min(i)
 
 print(max)
