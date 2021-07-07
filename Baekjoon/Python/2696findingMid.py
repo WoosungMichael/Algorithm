@@ -3,7 +3,7 @@ T = int(input())
 for i in range(T):
     M = int(input())
     arr = []
-    for j in range((M//10)+1):
+    for j in range(((M-1)//10)+1):
         arr.extend(list(map(int, input().split())))
 
     print((M+1)//2)
