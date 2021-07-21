@@ -1,5 +1,16 @@
 board = input()
 
+board = board.replace("XXXX", "AAAA")
+board = board.replace("XX", "BB")
+
+if "X" in board:
+    print(-1)
+else:
+    print(board)
+
+'''
+board = input()
+
 cnt = 0
 answer = ""
 for i in range(len(board)):
@@ -31,3 +42,4 @@ for i in range(len(board)):
                 exit()
 
 print(answer)
+'''
