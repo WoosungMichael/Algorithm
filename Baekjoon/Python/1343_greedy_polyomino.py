@@ -8,6 +8,7 @@ if "X" in board:
 else:
     print(board)
 
+
 '''
 board = input()
 
