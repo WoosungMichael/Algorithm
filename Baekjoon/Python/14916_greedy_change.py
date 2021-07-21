@@ -1,5 +1,17 @@
 change = int(input())
 
+cnt = 0
+while(change % 5 != 0 and change > 0):
+    change -= 2
+    cnt += 1
+
+if(change < 0):
+    print(-1)
+else:
+    print(cnt+change//5)
+
+'''
+
 if(change == 1 or change == 3):
     cnt = -1
 else:
@@ -25,3 +37,4 @@ else:
         cnt = (change-4)//5 + 2
 
 print(cnt)
+'''
