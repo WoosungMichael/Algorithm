@@ -15,12 +15,12 @@ def solution(n, a, b):
             answer += 1
             break
         elif minN > mid:
-            mid = (mid+right)//2
             left = mid
+            mid = (mid+right)//2
             answer += 1
         elif maxN <= mid:
-            mid = (left+mid)//2
             right = mid
+            mid = (left+mid)//2
             answer += 1
 
     answer = math.log2(n)+1-answer
