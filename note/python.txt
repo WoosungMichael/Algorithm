@@ -1,0 +1,47 @@
+- 리스트 역순으로 정렬
+    - arr.sort(reverse=True)
+
+- 교집합과 합집합
+    - union = list((set(arr1) | set(arr2)))
+    - intersection = list((set(arr1) & set(arr2)))
+
+- 리스트 초기화
+    - arr = [0 for i in range(arr_length)]
+
+- 리스트 최빈값
+    - from collections import Counter
+    - 최빈값이 하나인 경우
+        arr_1 = Counter(arr_2)
+        val = arr_1.most_common(1)[0][0]
+
+
+    - 최빈값이 여러개인 경우
+        arr_1 = Counter(arr_2)
+        cnt = arr_1.most_common()[0][1]
+        arr = []
+        for num in arr_1.most_common(): 
+            if num[1] == cnt: 
+                arr.append(num[0]) 
+
+- 리스트 문자열 연결
+    - str = ''.join(arr)
+
+- 리스트 요소 지우기
+    - del arr[i]
+
+- 아스키코드
+    - ord('a') = 97
+    - chr(65) = A
+
+- 문자열 대소문자 
+    - 변환
+        - str.upper()
+        - str.lower()
+    - 판별
+        - str.isupper()
+        - str.islower()
+
+- 파이썬 for문
+    - 역순
+        - for i in reversed(range(n)):
+        - for i in range(n, 0, -1):
