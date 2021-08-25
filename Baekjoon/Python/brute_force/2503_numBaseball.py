@@ -1,3 +1,6 @@
+import itertools
+
+
 def ball_cnt(a, b):
     cnt = 0
     for i in range(len(a)):
@@ -24,16 +27,17 @@ for i in range(N):
     num, s, b = map(int, input().split())
     arr.append([num, s, b])
 
+num_arr = []
+for i in itertools.permutations([1, 2, 3, 4, 5, 6, 7, 8, 9], 3):
+    num_arr.append(str(i[0]*100+i[1]*10+i[2]))
+
+
 cnt = 0
-for i in range(123, 1000):
-    num_s = str(i)
-    if(num_s[0] == 0 or num_s[1] == 0 or num_s[2] == 0 or num_s[0] == num_s[1] or num_s[0] == num_s[2] or num_s[1] == num_s[2]):
-        continue
+for i in num_arr:
     flag = True
     for j in arr:
-        if(strike_cnt(num_s, str(j[0])) != j[1] or ball_cnt(num_s, str(j[0])) != j[2]):
+        if(strike_cnt(i, str(j[0])) != j[1] or ball_cnt(i, str(j[0])) != j[2]):
             flag = False
-            break
     if flag:
         cnt += 1
 
