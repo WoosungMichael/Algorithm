@@ -53,9 +53,6 @@
       (1, 'a') (1, 'b') (2, 'a') (2, 'b') (3, 'a') (3, 'b') 
 
 
-출처: https://juhee-maeng.tistory.com/91 [simPLE]
-
-        
 - 파일 import
     - 하위 폴더에 있는 파일 import
         - Structure
