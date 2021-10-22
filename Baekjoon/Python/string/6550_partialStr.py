@@ -1,6 +1,8 @@
 while 1:
-    s, t = input().split()
-
+    try:
+        s, t = input().split()
+    except:
+        break
     flag1 = True
     index = -1
     for i in s:
