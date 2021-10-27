@@ -47,6 +47,13 @@
 - 리스트 요소 지우기
     - del arr[i]
 
+- 리스트 교집합 확인
+    - intersection
+        - set(s1) & set(s1)
+        - s1.intersection(s2)
+        - s1, s2는 set
+        - 시간복잡도 : O(len(s)+len(t))
+
 - 아스키코드
     - ord('a') = 97
     - chr(65) = A
@@ -84,6 +91,12 @@
     - for i in product([1,2,3],'ab'):
         print(i, end=" ")
       (1, 'a') (1, 'b') (2, 'a') (2, 'b') (3, 'a') (3, 'b') 
+
+
+- 시간 초과 해결
+    - import sys
+      input = sys.stdin.readline
+      해준 이후 코드 작성 -> input().strip()
 
 
 - 파일 import
