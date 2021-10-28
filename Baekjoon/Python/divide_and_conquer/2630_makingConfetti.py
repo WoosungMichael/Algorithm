@@ -27,14 +27,15 @@ def main():
 
     i = N
     while i >= 1:
-        for j in range(N):
-            for k in range(N):
+        for j in range(0, N, i):
+            for k in range(0, N, i):
                 if j+i <= N and k+i <= N and check_square(arr, j, k, i):
                     if arr[j][k] == 0:
                         cnt0 += 1
                     elif arr[j][k] == 1:
                         cnt1 += 1
                     change_square(arr, j, k, i)
+
         i //= 2
 
     print(cnt0)
