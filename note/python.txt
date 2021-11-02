@@ -97,6 +97,10 @@
     - import sys
       input = sys.stdin.readline
       해준 이후 코드 작성 -> input().strip()
+    
+    - 누적값 저장해둔 배열 
+      2중 for문의 안쪽 배열 해결
+      ->반복 대신 index로 접근
 
 
 - 파일 import
