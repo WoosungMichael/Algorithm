@@ -91,6 +91,8 @@
     - for i in product([1,2,3],'ab'):
         print(i, end=" ")
       (1, 'a') (1, 'b') (2, 'a') (2, 'b') (3, 'a') (3, 'b') 
+    - tmp = list(product(arr, repeat=i))
+        -> i개 뽑는 중복순열
 
 
 - 시간 초과 해결
