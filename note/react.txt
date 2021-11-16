@@ -1,0 +1,20 @@
+class Example extends Component {
+    constructor() {
+        super();
+        this.state = {
+            사용할 변수
+        }
+    }
+
+    componentDidMount(){
+        처음 한번만 실행되는 부분
+    }
+
+    render() { 지속적으로 업데이트 되는 부분
+        //
+        return(
+            HTML 부분
+        )
+    }
+}
+export default Example;
