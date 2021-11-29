@@ -18,3 +18,13 @@ class Example extends Component {
     }
 }
 export default Example;
+
+- render 속 조건문
+    {
+        ?   <>
+                <button>
+                    <img/>
+                </button>
+            </>
+        : null
+    }\
