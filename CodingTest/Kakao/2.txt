@@ -1,0 +1,13 @@
+/*
+Enter your query below.
+Please append a semicolon ";" at the end of the query
+*/
+SELECT DISTINCT "customer", customer.id, customer.customer_name
+FROM customer left outer join invoice on customer.id = invoice.customer_id
+WHERE invoice.customer_id is null
+
+UNION
+
+SELECT DISTINCT "product", product.id, product.product_name
+FROM product left outer join invoice_item on product.id = invoice_item.product_id
+WHERE invoice_item.product_id is null
