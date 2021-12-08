@@ -28,3 +28,13 @@ export default Example;
             </>
         : null
     }\
+
+
+- 비동기 처리
+function = async () => { 
+    try { 
+        const response = await axios.get(`http://`);
+        
+    } catch (e) 
+    { }
+  };
