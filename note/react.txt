@@ -38,3 +38,41 @@ function = async () => {
     } catch (e) 
     { }
   };
+
+
+- 모달창
+<div>
+    <button type="button" onClick={this.handleShow}></button>
+
+    <Modal show={show} onHide={this.handleClose} className="modal">
+    <Modal.Header closeButton>
+        <Modal.Title>Title</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+    <Form>
+        <Form.Group className="div-form1_cc" controlId="formProject">
+            <Form.Label className="text"> 제목</Form.Label>
+            <Form.Control className="dataInput-form_pc" placeholder="생성할 일정의 제목을 입력하세요." onChange={this.titleChange}/>
+        </Form.Group>
+    
+        <Form.Group className="date1-form_cc">
+            <Form.Label className="text">날짜</Form.Label>
+            <input type="date" className="form-control" onChange={this.startdateChange} defaultValue={this.state.start_date}/>
+        </Form.Group>
+
+        <Form.Group className="date2-form_cc">
+            <input type="date" className="form-control"  onChange={this.enddateChange} defaultValue={this.state.end_date}/>
+        </Form.Group>
+    </Form>
+    
+    </Modal.Body>
+    <Modal.Footer>
+        <Button variant="secondary" onClick={this.handleClose}>
+            취소
+        </Button>
+        <Button className="create-Button" type="submit" onClick={this.onClickSubmit}>
+            생성
+        </Button>
+    </Modal.Footer>
+    </Modal>
+</div>
