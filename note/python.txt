@@ -32,7 +32,6 @@
         arr_1 = Counter(arr_2)
         val = arr_1.most_common(1)[0][0]
 
-
     - 최빈값이 여러개인 경우
         arr_1 = Counter(arr_2)
         cnt = arr_1.most_common()[0][1]
@@ -46,6 +45,9 @@
 
 - 리스트 요소 지우기
     - del arr[i]
+
+- 리스트로 스택 구현
+    - stack.pop() : pop 구현
 
 - 리스트 교집합 확인
     - intersection
@@ -102,7 +104,7 @@
     
     - 누적값 저장해둔 배열 
       2중 for문의 안쪽 배열 해결
-      ->반복 대신 index로 접근
+      -> 반복 대신 index로 접근
 
 
 - 파일 import
