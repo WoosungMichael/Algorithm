@@ -96,6 +96,17 @@
     - tmp = list(product(arr, repeat=i))
         -> i개 뽑는 중복순열
 
+- random 라이브러리
+    - random.choice()
+        import random
+        a = random.choice([1,2,3,4,5])
+        리스트 중 하나 랜덤 리턴
+    - random.sample()
+        random.sample(range(10), k)
+        range(10)에 속하는 요소 중 중복되지 않게 k개를 리스트 형식으로 리턴
+    - random.shuffle()
+        random.shuffle(seq)
+        seq를 무작위로 섞어주는 함수 
 
 - 시간 초과 해결
     - import sys
