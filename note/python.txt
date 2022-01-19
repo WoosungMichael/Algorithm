@@ -108,6 +108,11 @@
         random.shuffle(seq)
         seq를 무작위로 섞어주는 함수 
 
+- deque
+    from collections import deque
+    arr = deque()
+    arr.popleft()
+
 - 시간 초과 해결
     - import sys
       input = sys.stdin.readline
