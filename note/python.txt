@@ -96,6 +96,13 @@
     - tmp = list(product(arr, repeat=i))
         -> i개 뽑는 중복순열
 
+- 진수 변환
+    - num1 = int(num2, N)
+        - num2 : string형
+        - num1에 N진법 숫자 num2를 10진법으로 변환하여 저장
+    - print(format(num1, 'b'))
+        - num1을 2진수로 변환하여 출력
+
 - random 라이브러리
     - random.choice()
         import random
