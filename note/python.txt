@@ -103,6 +103,10 @@
     - print(format(num1, 'b'))
         - num1을 2진수로 변환하여 출력
 
+- XOR 연산
+    - a와 b의 XOR 연산
+        - a ^ b
+
 - random 라이브러리
     - random.choice()
         import random
