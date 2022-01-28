@@ -175,3 +175,9 @@
             import sys, os
             sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
             from folder3 import ddd
+
+- 파일 입출력
+    - 추가모드
+        file = open("testtest.txt", "a")
+        file.write(input()+"\n")
+        file.close()
