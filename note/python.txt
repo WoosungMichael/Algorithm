@@ -107,6 +107,10 @@
     - a와 b의 XOR 연산
         - a ^ b
 
+- OR 연산
+    - a와 b의 OR 연산
+        - a | b
+        
 - random 라이브러리
     - random.choice()
         import random
