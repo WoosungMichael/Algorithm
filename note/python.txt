@@ -110,6 +110,17 @@
 - OR 연산
     - a와 b의 OR 연산
         - a | b
+
+- 딕셔너리
+    - {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}
+    - 관련 함수
+        a.keys()
+        a.values()
+        a.items()
+        a.clear()
+        a.get('name')
+    - 요소 삭제하기
+        del a['name']
         
 - random 라이브러리
     - random.choice()
