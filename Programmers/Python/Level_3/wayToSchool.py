@@ -11,6 +11,18 @@ def solution(m, n, puddles):
         p[i[0] - 1][i[1] - 1] = 1
         arr[i[0] - 1][i[1] - 1] = 0
     
+    for i in range(n):
+        if p[i][0] == 1:
+            for j in range(i, n):
+                p[j][0] = 1
+                arr[j][0] = 0
+        
+    for j in range(m):
+        if p[0][j] == 1:
+            for i in range(j, m):
+                p[0][i] = 1
+                arr[0][i] = 0
+    
     for i in range(1, n):
         for j in range(1, m):
             if p[i][j] == 0:
