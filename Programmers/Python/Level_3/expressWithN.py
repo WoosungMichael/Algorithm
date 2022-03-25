@@ -13,14 +13,13 @@ def solution(N, number):
 
     for i in range(1, 8):
         for j in range(i):
-            for k in range(i - j):
-                for jj in make[j]:
-                    for kk in make[k]:
-                        make[i].append(jj + kk)
-                        make[i].append(kk - jj)
-                        make[i].append(jj * kk)
-                        if kk != 0:
-                            make[i].append(jj // kk)
+            for num1 in make[j]:
+                for num2 in make[i - j - 1]:
+                    make[i].append(num1 + num2)
+                    make[i].append(num1 - num2)
+                    make[i].append(num1 * num2)
+                    if num2 != 0:
+                        make[i].append(num1 // num2)
         make[i] = list(set(make[i]))
         if number in make[i]:
             return i + 1
