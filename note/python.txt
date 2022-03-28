@@ -9,7 +9,7 @@
     - arr = [0 for i in range(arr_length)]
     - arr = [0] * 26
     - ex) 
-            arr = [[0 for i in range(3)]] * 5
+            arr = [[0 for i in range(3)] * 5]
             print(arr)
             arr[1][1] = 1
             print(arr)
@@ -45,6 +45,20 @@
 
 - 리스트 요소 지우기
     - del arr[i]
+        i번째 인덱스 요소 삭제
+    
+    - arr.remove(i)
+        - i라는 아이템 삭제(없으면 ValurError)
+        - 주의점
+            arr = [1, 2, 3, 4, 5]
+            for i in arr:
+                print(i, end = " ")
+                arr.remove(i)
+            실행시 : 1, 3, 5
+        - 해결방법
+            for i in arr[:]:
+                print(i, end = " ")
+                arr.remove(i)
 
 - 리스트로 스택 구현
     - stack.pop() : pop 구현
