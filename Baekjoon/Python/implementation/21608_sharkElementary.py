@@ -39,14 +39,14 @@ for i in range(N ** 2):
                 if k < N - 1 and arr[j][k + 1] == 0:
                     blank += 1
 
-            if cnt > max_cnt:
-                max_cnt = cnt
-                max_blank = blank
-                x, y = j, k
-            elif cnt == max_cnt:
-                if blank > max_blank:
+                if cnt > max_cnt:
+                    max_cnt = cnt
                     max_blank = blank
                     x, y = j, k
+                elif cnt == max_cnt:
+                    if blank > max_blank:
+                        max_blank = blank
+                        x, y = j, k
     arr[x][y] = like[i][0]
 
 for i in range(N):
