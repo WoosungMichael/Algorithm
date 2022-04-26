@@ -15,4 +15,3 @@ for i in range(2, n + 1):
     arr.append(tmp)
 
 print(arr[-1])
-    
