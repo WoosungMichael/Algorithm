@@ -8,6 +8,7 @@ def solution(board):
     
     q = deque()
     arr = [[0] * len(board) for _ in range(len(board))]
+    arr_min = [[600 * len(board) * len(board)] * len(board) for _ in range(len(board))]
     arr[0][0] = 1
     q.append([0, 0, 0, 0, arr])
     q.append([0, 0, 1, 0, arr])
@@ -27,12 +28,14 @@ def solution(board):
             
         for i in range(4):
             if i == d:
-                if 0 <= x + dx[i] < len(board) and 0 <= y + dy[i] < len(board) and board[x + dx[i]][y + dy[i]] == 0 and tmp[x + dx[i]][y + dy[i]] == 0:
+                if 0 <= x + dx[i] < len(board) and 0 <= y + dy[i] < len(board) and board[x + dx[i]][y + dy[i]] == 0 and tmp[x + dx[i]][y + dy[i]] == 0 and cost < arr_min[x + dx[i]][y + dy[i]] + 500:
                     tmp[x + dx[i]][y + dy[i]] = 1
                     q.appendleft([x + dx[i], y + dy[i], d, cost, tmp])
+                    arr_min[x + dx[i]][y + dy[i]] = cost
             else:
-                if 0 <= x + dx[i] < len(board) and 0 <= y + dy[i] < len(board) and board[x + dx[i]][y + dy[i]] == 0 and tmp[x + dx[i]][y + dy[i]] == 0:
+                if 0 <= x + dx[i] < len(board) and 0 <= y + dy[i] < len(board) and board[x + dx[i]][y + dy[i]] == 0 and tmp[x + dx[i]][y + dy[i]] == 0 and cost + 500 < arr_min[x + dx[i]][y + dy[i]] + 500:
                     tmp[x + dx[i]][y + dy[i]] = 1
                     q.appendleft([x + dx[i], y + dy[i], i, cost + 500, tmp])
+                    arr_min[x + dx[i]][y + dy[i]] = cost + 500
     
     return answer
