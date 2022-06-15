@@ -3,5 +3,14 @@ LIMIT N : 상위 n개 출력
 
 GROUP BY는 항상 WHERE 보다 뒤에 써주기
 
+DATETIME에서 요소 뽑기
+    - YEAR : 연도 추출
+    - MONTH : 월 추출
+    - DAY : 일 추출 (DAYOFMONTH와 같은 함수)
+    - HOUR : 시 추출
+    - MINUTE : 분 추출
+    - SECOND : 초 추출
+    - ex) YEAR(DATETIME)
+
 RESTRICT : 개체를 변경/삭제할 때 다른 개체가 변경/삭제할 개체를 참조하고 있을 경우 변경/삭제가 취소
 CASCADE : 개체를 변경/삭제할 때 다른 개체가 변경/삭제할 개체를 참조하고 있을 경우 함께 변경/삭제
