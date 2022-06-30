@@ -12,6 +12,9 @@ DATETIME에서 요소 뽑기
     - SECOND : 초 추출
     - ex) YEAR(DATETIME)
 
+DATETIME에서 날짜만 추출
+    - DATE_FORMAT(DATETIME, "%Y-%m-%d")
+
 IFNULL(A, B)
     - A가 NULL이면 B를, 그렇지 않다면 A를 반환
 
@@ -19,9 +22,7 @@ IFNULL(A, B)
     - 조건에 따라 출력 내용 변경
     - CASE WHEN <조건> THEN 'O' ELSE 'X' END
     - SELECT IF(<조건>,'O','X') FROM ANIMAL_INS
-    - CASE WHEN (SEX_UPON_INTAKE LIKE '%NEUTERED%' OR SEX_UPON_INTAKE LIKE '%SPAYED%') THEN 'O' ELSE 'X' END
-    - SELECT ANIMAL_ID, NAME, IF(SEX_UPON_INTAKE LIKE '%NEUTERED%' OR SEX_UPON_INTAKE LIKE '%SPAYED%','O','X') AS '중성화' FROM ANIMAL_INS
-
+    
 DISTINCT
     - 중복 제거
     - SELECT COUNT(DISTINCT NAME) FROM ANIMAL_INS
