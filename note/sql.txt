@@ -1,4 +1,4 @@
-LIMIT N : 상위 n개 출력
+LIMIT N : 상위 N개 출력
     - SELECT NAME FROM ANIMAL_INS ORDER BY DATETIME LIMIT 1
 
 GROUP BY는 항상 WHERE 보다 뒤에 써주기
