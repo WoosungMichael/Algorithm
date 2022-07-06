@@ -2,9 +2,9 @@ LIMIT N : 상위 N개 출력
     - SELECT NAME FROM ANIMAL_INS ORDER BY DATETIME LIMIT 1
 
 LIKE
-    - NAME LIKE '%el%'
+    - NAME LIKE '%word%'
         % : 글자 수 제한 X
-    - NAME LIKE '_el_'
+    - NAME LIKE '_word_'
         _ : 해당 글자 수만큼 글자 존재
 
 GROUP BY는 항상 WHERE 보다 뒤에 써주기
