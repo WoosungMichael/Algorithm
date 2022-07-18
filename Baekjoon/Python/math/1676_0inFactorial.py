@@ -12,5 +12,5 @@ else:
     num = factorial(N)
     while num % 10 == 0:
         answer += 1
-        num /= 10
+        num //= 10
     print(answer)
