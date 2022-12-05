@@ -1,0 +1,3 @@
+- 배열의 크기 : arr.size()
+
+- 문자열 자르기 : string.substr(시작 위치, 길이)
