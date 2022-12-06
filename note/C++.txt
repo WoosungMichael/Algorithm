@@ -1,3 +1,12 @@
-- 배열의 크기 : arr.size()
+Vector
+- 요소 삽입 : v.push_back(7)
+- 크기 : v.size()
+- 첫번째 원소를 가리킴 : v.begin()
+- 마지막 "다음"을 가리킴 : v.end()
+- 요소 찾기 : find(v.begin(), v.end(), 찾을 요소)
+  - 요소가 없다면 : return이 v.end()
+  - cf) vector 내에서 해당 원소의 인덱스 찾기
+    find(v.begin(), v.end(), 찾을 요소) - v.begin()
 
-- 문자열 자르기 : string.substr(시작 위치, 길이)
+String
+- 자르기 : string.substr(시작 위치, 길이)
