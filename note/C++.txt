@@ -1,12 +1,19 @@
 Vector
+- 선언 :
+  vector<int> v;    : 크기가 0인 벡터 선언
+  vector<int> v(10)    : 크기가 10인 벡터 선언
+  vector<int> v(10, 3)    : 크기가 10이고 모든 원소가 3인 벡터 선언
+  vector<int> v = {1, 2, 3, 4, 5}    : 지정한 초기값으로 이루어진 크기가 5인 벡터 선언
 - 요소 삽입 : v.push_back(7)
 - 크기 : v.size()
 - 첫번째 원소를 가리킴 : v.begin()
 - 마지막 "다음"을 가리킴 : v.end()
 - 요소 찾기 : find(v.begin(), v.end(), 찾을 요소)
-  - 요소가 없다면 : return이 v.end()
-  - cf) vector 내에서 해당 원소의 인덱스 찾기
-    find(v.begin(), v.end(), 찾을 요소) - v.begin()
+- 요소가 없다면 : return이 v.end()
+- cf) vector 내에서 해당 원소의 인덱스 찾기
+find(v.begin(), v.end(), 찾을 요소) - v.begin()
 
 String
 - 자르기 : string.substr(시작 위치, 길이)
+- 길이 : string.length()
+
