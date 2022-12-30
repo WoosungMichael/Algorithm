@@ -1,6 +1,10 @@
 - 리스트 역순으로 정렬
     - arr.sort(reverse=True)
 
+- 리스트 정렬
+    - arr.sort(key = lambda x : (x[0], -x[1]))
+        첫번째 인자를 기준으로 오름차순으로 정렬한 후에, 두번째 인자를 기준으로 내림차순으로 정렬
+        
 - 교집합과 합집합
     - union = list((set(arr1) | set(arr2)))
     - intersection = list((set(arr1) & set(arr2)))
