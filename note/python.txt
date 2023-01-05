@@ -162,6 +162,8 @@
         a.get('name')
     - 요소 삭제하기
         del a['name']
+    - key 내부 원소인지 확인
+        'name' in a
         
 - random 라이브러리
     - random.choice()
