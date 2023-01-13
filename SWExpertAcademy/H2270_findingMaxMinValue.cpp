@@ -3,7 +3,7 @@
 using namespace std;
 #define MAX_N 200001
 #define rint register int
-
+#define FAST __attribute((optimize("Ofast")))
 int cnt, i, flag1, flag2;
 int minV, maxV;
 
