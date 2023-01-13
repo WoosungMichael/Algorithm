@@ -1,19 +1,22 @@
 #include <iostream>
 #include <vector>
+#define FAST __attribute((optimize("Ofast")))
+#define rint register int
 using namespace std;
 
 vector<vector<int>> v;
-int i, j, time, cnt, r, c, flag;
+int time, cnt, r, c, flag;
 
 void init(int R, int C)
 {
     r = R;
     c = C;
-    for(i = 0; i < c; i++){
+    for(rint i = 0; i < c; i++){
         vector<int> tmp;
         v.push_back(tmp);
     }
     time = 0;
+    cnt = 0;
 }
 
 int dropBlocks(int mTimestamp, int mCol, int mLen)
@@ -21,9 +24,9 @@ int dropBlocks(int mTimestamp, int mCol, int mLen)
     cnt += mLen;
 
     vector<vector<int>> v2;
-    for(i = 0; i < c; i++){
+    for(rint i = 0; i < c; i++){
         vector<int> tmp;
-        for(j = 0; j < v[i].size(); j++){
+        for(rint j = 0; j < v[i].size(); j++){
             v[i][j] += mTimestamp - time;
             if(v[i][j] >= r){
                 cnt -= 1;
@@ -38,7 +41,7 @@ int dropBlocks(int mTimestamp, int mCol, int mLen)
 
     v = v2;
 
-    for(i = 0; i < mLen; i++){
+    for(rint i = 0; i < mLen; i++){
         v[mCol + i].push_back(0);
     }
 
@@ -60,10 +63,10 @@ int dropBlocks(int mTimestamp, int mCol, int mLen)
 int removeBlocks(int mTimestamp)
 {
     vector<vector<int>> v2;
-    for(i = 0; i < c; i++){
+    for(rint i = 0; i < c; i++){
         vector<int> tmp;
         flag = 1;
-        for(j = 0; j < v[i].size(); j++){
+        for(rint j = 0; j < v[i].size(); j++){
             v[i][j] += mTimestamp - time;
             if(v[i][j] >= r){
                 cnt -= 1;
@@ -71,7 +74,7 @@ int removeBlocks(int mTimestamp)
             else{
                 if(flag){
                     cnt -= 1;
-                    flag = false;
+                    flag = 0;
                 }
                 else{
                     tmp.push_back(v[i][j]);
@@ -95,6 +98,107 @@ int removeBlocks(int mTimestamp)
     // cout << "\n";
     return cnt;
 }
+
+// #include <iostream>
+// #include <vector>
+// #define FAST __attribute((optimize("Ofast")))
+// #define rint register int
+// using namespace std;
+
+// vector<vector<int>> v;
+// int time, cnt, r, c, flag;
+
+// void init(int R, int C)
+// {
+//     r = R;
+//     c = C;
+//     for(rint i = 0; i < c; i++){
+//         vector<int> tmp;
+//         v.push_back(tmp);
+//     }
+//     time = 0;
+//     cnt = 0;
+// }
+
+// int dropBlocks(int mTimestamp, int mCol, int mLen)
+// {
+//     cnt += mLen;
+
+//     vector<vector<int>> v2;
+//     for(rint i = 0; i < c; i++){
+//         vector<int> tmp;
+//         for(rint j = 0; j < v[i].size(); j++){
+//             v[i][j] += mTimestamp - time;
+//             if(v[i][j] >= r){
+//                 cnt -= 1;
+//             }
+//             else{
+//                 tmp.push_back(v[i][j]);
+//             }
+//         }
+//         v2.push_back(tmp);
+//     }
+//     time = mTimestamp;
+
+//     v = v2;
+
+//     for(rint i = 0; i < mLen; i++){
+//         v[mCol + i].push_back(0);
+//     }
+
+
+//     // cout << cnt << '\n';
+//     // for(i = 0; i < c; i++){
+//     //     int flag = 0;
+//     //     for(j = 0; j < v[i].size(); j++){
+//     //         cout << v[i][j] << " ";
+//     //         flag = 1;
+//     //     }
+//     //     if(flag)
+//     //         cout << "\n";
+//     // }
+//     // cout << "\n";
+//     return cnt;
+// }
+
+// int removeBlocks(int mTimestamp)
+// {
+//     vector<vector<int>> v2;
+//     for(rint i = 0; i < c; i++){
+//         vector<int> tmp;
+//         flag = 1;
+//         for(rint j = 0; j < v[i].size(); j++){
+//             v[i][j] += mTimestamp - time;
+//             if(v[i][j] >= r){
+//                 cnt -= 1;
+//             }
+//             else{
+//                 if(flag){
+//                     cnt -= 1;
+//                     flag = 0;
+//                 }
+//                 else{
+//                     tmp.push_back(v[i][j]);
+//                 }
+//             }
+
+//         }
+//         v2.push_back(tmp);
+//     }
+
+//     v = v2;
+//     time = mTimestamp;
+
+//     // cout << cnt << '\n';
+//     // for(i = 0; i < c; i++){
+//     //     for(j = 0; j < v[i].size(); j++){
+//     //         cout << v[i][j] << " ";
+//     //     }
+//     //     cout << "\n";
+//     // }
+//     // cout << "\n";
+//     return cnt;
+// }
 
 
 #ifndef _CRT_SECURE_NO_WARNINGS
